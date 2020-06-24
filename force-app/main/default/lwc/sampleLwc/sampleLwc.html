@@ -1,3 +1,28 @@
 <template>
-    
+
+<lightning-card title = "Hello world">
+
+    <div class = "greeting-class">Hello {dynamicGreeting}</div>
+    <lightning-input  label = "Greeting " placeholder= "Write somthing" onchange = "{changeDynamicGreeting}"></lightning-input>
+
+
+    <lightning-input type = "checkbox" lable= "check it !" onchange={checkboxChange} ></lightning-input>
+      <template if:true = {displayDiv}>
+         <div>div is visible only when chckbox is checked</div>
+       </template>
+
+<!-- for iteration we can use for Each loop or Iterator -->
+
+<template for:each = {cityList}   for:item = "city">
+<p key = {city}>{city}</p>
+</template>
+
+<!-- iterator directive , we can access 1st and last element of list by 
+it.first , it.last and get the index using it.index   -->
+<template iterator:it  = {cityList}>
+<p key = {it.value}>  {it.value} </p>
+</template>
+       
+
+</lightning-card>    
 </template>
