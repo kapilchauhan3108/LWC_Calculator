@@ -1,0 +1,27 @@
+<template>
+    
+   <lightning-card title = "Calculator"> 
+
+
+    <lightning-input placeholder= "1st Number"  type = "Integer" value = {firstNumber} onchange= {firstNumberChange}></lightning-input>
+
+    <lightning-input placeholder= "2nd Number"  type = "Integer" value= {secondNumber} onchange={secondNumberChange}></lightning-input>
+
+    <lightning-button variant="brand" label="+" onclick={operatorChange}> </lightning-button>
+    <lightning-button variant="brand" label="-" onclick={operatorChange}> </lightning-button>
+    <lightning-button variant="brand" label="*" onclick={operatorChange}> </lightning-button>
+    <lightning-button variant="brand" label="/" onclick={operatorChange}> </lightning-button>
+    
+    <lightning-button
+        variant="brand"
+        label="Calculate"
+        title=""
+        onclick={calculate}>
+    </lightning-button>
+
+    <lightning-input placeholder= "answer"  type = "Integer" value= {answer}></lightning-input>
+
+   </lightning-card>
+
+
+</template>
